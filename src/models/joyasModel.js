@@ -2,7 +2,7 @@
 import format from 'pg-format';
 import pool from "../../database/config.js";
 
-//Limit
+// LIMIT AND HATEOAS
 export const getAllDataWithLimitModel = async (limits = 10, page = 0, order_by = 'stock_ASC') => {
     let offset = 0;
     if (Number(page) > 0){
@@ -30,7 +30,7 @@ export const getAllDataWithLimitModel = async (limits = 10, page = 0, order_by =
     }
 };
 
-//Params
+// FILTERS MIN precio, MAX precio, categoria and metal
 export const getAllDataWithFiltersModel = async (precio_min = 0, precio_max = 0, categoria = '', metal = '') => {
     let textQuery = 'SELECT * FROM inventario WHERE id = id ';
     let params = [];

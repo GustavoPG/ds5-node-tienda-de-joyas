@@ -2,7 +2,7 @@
 import { getAllDataWithLimitModel, getAllDataWithFiltersModel } from "../models/joyasModel.js";
 import { searchError } from "../utils/utils.js";
 
-// GET JOYAS WITH HATEOAS
+// GET ALL JOYAS WITH WITH LIMIT AND HATEOAS
 export const getAllDataLimit = async (req, res) => {
     try {
         const { limits, page, order_by } = req.query;
@@ -26,7 +26,7 @@ export const getAllDataLimit = async (req, res) => {
     }
 };
 
-// GET JOYAS WITH FILTERS
+// GET JOYAS WITH FILTERS MIN precio, MAX precio, categoria and metal
 export const getAllDataWithFilters = async (req, res) => {
     try {
         const { precio_min, precio_max, categoria, metal } = req.query;

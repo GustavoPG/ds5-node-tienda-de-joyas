@@ -4,6 +4,7 @@ import { getAllDataLimit, getAllDataWithFilters } from '../controllers/joyasCont
 
 const router = Router();
 
+// rutas
 router.get('/joyas', getAllDataLimit);
 router.get('/joyas/filtros', getAllDataWithFilters);
 

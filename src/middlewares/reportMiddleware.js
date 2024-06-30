@@ -6,7 +6,7 @@ const reportMiddleware = (req, res, next) => {
     const method = req.method;
     const path = req.originalUrl;
 
-console.log(`##########Reporte de Consulta##########
+console.log(`##########-Datos de Consulta-##########
 Fecha: [${timestamp}] 
 Método: ${method}
 Ruta: ${path}
